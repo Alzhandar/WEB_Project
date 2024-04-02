@@ -20,6 +20,6 @@ KazHistoryWiki — это интерактивная веб-платформа, 
 Чтобы запустить проект локально, выполните следующие шаги:
 
 ## Участники группы
-- **Zharylkhassyn Nurymzhan 
-- **Daribayev Alzhan
-- **Daulet Darmen
+- Zharylkhassyn Nurymzhan 
+- Daribayev Alzhan
+- Daulet Darmen
