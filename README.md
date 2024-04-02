@@ -19,7 +19,7 @@ KazHistoryWiki — это интерактивная веб-платформа, 
 
 Чтобы запустить проект локально, выполните следующие шаги:
 
-### Клонирование репозитория
-
-```bash
-git clone https://github.com/your-username/KazHistoryWiki.git
+## Участники группы
+Zharylkhassyn Nurymzhan 
+Daribayev Alzhan
+Daulet Darmen
