@@ -15,10 +15,6 @@ KazHistoryWiki — это интерактивная веб-платформа, 
 - Frontend: Angular
 - Backend: Django
 
-## Начало работы
-
-Чтобы запустить проект локально, выполните следующие шаги:
-
 ## Участники группы
 - Zharylkhassyn Nurymzhan 
 - Daribayev Alzhan
