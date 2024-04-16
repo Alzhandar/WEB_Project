@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CategoryService } from '../../services/category.service';
 import { Category } from '../../models/category.model';
 
@@ -10,28 +11,18 @@ import { Category } from '../../models/category.model';
 export class CategoryListComponent implements OnInit {
   categories: Category[] = [];
 
-  constructor(private categoryService: CategoryService) {}
+  constructor(private categoryService: CategoryService, private router: Router) {}
 
   ngOnInit() {
-    this.categoryService.getAllCategories().subscribe({
-      next: (categories) => {
-        this.categories = categories;
-      },
-      error: (error) => {
-        console.error('Error fetching categories:', error);
-      }
+    this.categoryService.getAllCategories().subscribe(categories => {
+      this.categories = categories;
     });
   }
-}
-// import { NgModule } from '@angular/core';
-// import { CommonModule } from '@angular/common'; // Это необходимо для работы директивы ngIf
-// import { CategoryListComponent } from './category-list.component';
 
-// @NgModule({
-//   declarations: [CategoryListComponent],
-//   imports: [
-//     CommonModule // CommonModule включает директивы ngIf, ngFor и другие
-//   ],
-//   exports: [CategoryListComponent] // Экспортируем CategoryListComponent, если он используется в других местах
-// })
-// export class CategoryListModule {}
+  navigateToCategory(categoryId?: number) {
+    if (categoryId !== undefined) {
+      this.router.navigate(['/categories', categoryId, 'persons']);
+    }
+  }
+  
+}

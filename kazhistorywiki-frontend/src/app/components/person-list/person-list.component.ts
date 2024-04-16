@@ -1,5 +1,5 @@
-// src/app/components/person-list/person-list.component.ts
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { PersonService } from '../../services/person.service';
 import { Person } from '../../models/person.model';
 
@@ -11,16 +11,11 @@ import { Person } from '../../models/person.model';
 export class PersonListComponent implements OnInit {
   persons: Person[] = [];
 
-  constructor(private personService: PersonService) {}
+  constructor(private personService: PersonService, private router: Router) {}
 
   ngOnInit() {
-    this.personService.getAllPersons().subscribe({
-      next: (data) => {
-        this.persons = data;
-      },
-      error: (err) => {
-        console.error('Failed to get persons', err);
-      }
+    this.personService.getAllPersons().subscribe(persons => {
+      this.persons = persons;
     });
   }
 }

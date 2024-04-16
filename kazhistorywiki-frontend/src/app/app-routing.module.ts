@@ -6,14 +6,23 @@ import { CommentListComponent } from './components/comment-list/comment-list.com
 import { HistoricalPeriodListComponent } from './components/historical-period-list/historical-period-list.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home-component.component'; 
+import { RegisterComponent } from './register/register.component';
+import { EventListComponent } from './components/event-list/event-list.component'; 
+// import { PersonListComponent } from './persons/person-list/person-list.component';
+
+
 
 const routes: Routes = [
   { path: 'categories', component: CategoryListComponent },
+  { path: 'categories/:id/persons', component: PersonListComponent },
   { path: 'persons', component: PersonListComponent },
+  // { path: 'persons', component: PersonListComponent },
   { path: 'comments', component: CommentListComponent },
   { path: 'historical-periods', component: HistoricalPeriodListComponent },
   { path: 'login', component: LoginComponent },
-  { path: '', component: HomeComponent },  // Используйте HomeComponent как корневой маршрут
+  { path: 'register', component: RegisterComponent },
+  { path: '', component: HomeComponent }, 
+  { path: 'events', component: EventListComponent },
 ];
 
 @NgModule({

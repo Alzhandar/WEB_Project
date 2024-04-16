@@ -1,0 +1,60 @@
+.person-list-container {
+    width: 100%;
+    max-width: 960px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .person-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .person-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .person-item:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .person-photo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+  
+  .person-info {
+    flex: 1;
+  }
+  
+  .person-info h2 {
+    margin: 0 0 10px 0;
+    color: #333;
+    font-size: 24px;
+  }
+  
+  .biography {
+    margin: 0;
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .details {
+    font-size: 14px;
+    color: #777;
+    margin-top: 5px;
+  }
+  
+  .details span {
+    font-weight: bold;
+  }
+  

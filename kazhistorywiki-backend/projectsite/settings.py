@@ -132,19 +132,21 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-CORS_ALLOW_ALL_ORIGINS = True  # Используйте False, если указываете конкретные домены
+CORS_ALLOW_ALL_ORIGINS = True  
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:4200",
 ]
+
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.AllowAny',  # Убедитесь, что это не ограничивает доступ
+        'rest_framework.permissions.AllowAny',  
     ],
         'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
     
 }
+
 
 CORS_ALLOW_HEADERS = [
     'authorization',

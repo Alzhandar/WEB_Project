@@ -6,18 +6,28 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';  
 import { CommonModule } from '@angular/common';  
+import { ReactiveFormsModule } from '@angular/forms';
+import { RegisterModule } from './register/register.module'; 
+import { CategoryListModule } from './components/category-list/category-list.module';
+import { PersonListModule } from './components/person-list/person-list.module'; 
+import { EventListModule } from './components/event-list/event-list.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent 
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
     AppRoutingModule,
-    CommonModule 
+    CommonModule,
+    ReactiveFormsModule, 
+    RegisterModule,
+    CategoryListModule ,
+    PersonListModule,
+    EventListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,5 @@
+<div *ngFor="let person of persons">
+    <h3>{{ person.name }}</h3>
+    <p>{{ person.biography }}</p>
+    <img *ngIf="person.photoUrl" [src]="person.photoUrl" alt="Photo of {{ person.name }}">
+  </div>

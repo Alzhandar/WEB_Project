@@ -17,11 +17,12 @@ export class LoginComponent {
     private router: Router  
   ) {}
 
-  login() {
-    this.authService.login(this.username, this.password).subscribe(
+  login(username: string, password: string) {
+    this.authService.login(username, password).subscribe(
       user => {
         console.log("Login successful", user);
-        this.router.navigate(['/']); 
+        localStorage.setItem('token', user.token); 
+        this.router.navigate(['/']);
       },
       error => {
         this.errorMessage = "Login failed: " + error.message;
@@ -29,4 +30,5 @@ export class LoginComponent {
       }
     );
   }
+  
 }

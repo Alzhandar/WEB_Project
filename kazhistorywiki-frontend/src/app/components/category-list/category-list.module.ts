@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common'; // Это необходимо для работы директивы ngIf
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { CategoryListComponent } from './category-list.component';
 
 @NgModule({
   declarations: [CategoryListComponent],
   imports: [
-    CommonModule // CommonModule включает директивы ngIf, ngFor и другие
+    CommonModule, 
+    HttpClientModule 
   ],
-  exports: [CategoryListComponent] // Экспортируем CategoryListComponent, если он используется в других местах
+  exports: [CategoryListComponent] 
 })
 export class CategoryListModule {}

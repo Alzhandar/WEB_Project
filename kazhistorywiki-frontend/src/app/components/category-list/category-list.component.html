@@ -1,8 +1,6 @@
-<div *ngIf="categories.length > 0; else noData">
-    <ul>
-      <li *ngFor="let category of categories">
-        {{ category.name }} - {{ category.description }}
-      </li>
-    </ul>
+<div class="category-list">
+  <div *ngFor="let category of categories" class="category-item">
+    <h3 (click)="navigateToCategory(category.id)">{{ category.name }}</h3>
+    <p>{{ category.description }}</p>
   </div>
-  <ng-template #noData><p>No categories found.</p></ng-template>
+</div>

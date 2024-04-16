@@ -1,7 +1,21 @@
-<!-- src/app/components/person-list/person-list.component.html -->
-<ul>
-    <li *ngFor="let person of persons">
-      {{ person.name }} - {{ person.biography }}
+<div class="person-list-container">
+  <ul class="person-list">
+    <li *ngFor="let person of persons" class="person-item">
+      <div class="person-photo" *ngIf="person.photo">
+        <img [src]="person.photo" alt="Photo of {{ person.name }}">
+      </div>
+      <div class="person-info">
+        <h2>{{ person.name }}</h2>
+        <p class="biography">{{ person.biography }}</p>
+        <p class="details">
+          Birth Year: <span *ngIf="person.birth_year">{{ person.birth_year }}</span>
+          <span *ngIf="!person.birth_year">Unknown</span>
+        </p>
+        <p class="details">
+          Birth Date: <span *ngIf="person.birth_date">{{ person.birth_date | date:'longDate' }}</span>
+          <span *ngIf="!person.birth_date">Unknown</span>
+        </p>
+      </div>
     </li>
   </ul>
-  
+</div>
