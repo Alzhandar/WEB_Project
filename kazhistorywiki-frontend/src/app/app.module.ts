@@ -11,12 +11,14 @@ import { RegisterModule } from './register/register.module';
 import { CategoryListModule } from './components/category-list/category-list.module';
 import { PersonListModule } from './components/person-list/person-list.module'; 
 import { EventListModule } from './components/event-list/event-list.module';
+import {HomeComponent} from "./home/home-component.component";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LoginComponent,
-  ],
+    declarations: [
+        AppComponent,
+        LoginComponent,
+        HomeComponent,
+    ],
   imports: [
     BrowserModule,
     HttpClientModule,
