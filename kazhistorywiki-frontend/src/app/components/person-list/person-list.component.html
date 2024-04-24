@@ -20,36 +20,69 @@
 <!--  </ul>-->
 <!--</div>-->
 
-<head>
+<head xmlns="http://www.w3.org/1999/html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
 <section class="Persons container" id="persons">
-    <div class="heading">
-        <h2 class="heading-title">
-            Categories
-        </h2> </div>
-        <swiper-container #swiper class="swiper-container"
-                          navigation="true" pagination="true" scrollbar="true"
-        >
-                <ng-container *ngFor="let person of persons">
-                    <swiper-slide>
-                            <div class="persons-box" >
-                                <div class="person-photo" *ngIf="person.photo">
-                                    <img [src]="person.photo" alt="Photo of {{ person.name }}" class="persons-box-img">
-                                </div>
-                            </div>
-                            <div class="box-text">
-                                <h2 class="persons-title">{{ person.name }}</h2>
-                                <span class="persons-type">{{ person.birth_year }}</span>
-                            </div>
-                    </swiper-slide>
-                </ng-container>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
+    <div class="headingg">
+        <h2 class="headingg-title">
+            Persons
+        </h2>
+        <div class="swiper_btn">
             <div class="swiper-button-next"></div>
-        </swiper-container>
+            <div class="swiper-button-prev"></div>
 
-
+        </div>
+        <div class="swiper-btn">
+            <div class="swiper-pagination"></div>
+            <div class="swiper_button-next" ></div>
+            <div class="swiper_button-prev" ></div>
+        </div>
+    </div>
+    <div class="persons-content swiper">
+        <div class="swiper-wrapper">
+            <ng-container *ngFor="let person of persons">
+            <div class="swiper-slide">
+                <div class="persons-box">
+                    <img src="{{person.photo}}" alt="Photo of {{person.name}}" class="persons-box-img">
+                    <div class="box-text">
+                        <h2 class="persons-title">{{person.name}}</h2>
+                        <h2 class="person-date">{{person.birth_year}}</h2>
+                    </div>
+                </div>
+            </div>
+            </ng-container>
+        </div>
+    </div>
 </section>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!--&lt;!&ndash;        <swiper-container #swiper class="swiper-container"&ndash;&gt;-->
+<!--&lt;!&ndash;                          navigation="true" pagination="true" scrollbar="true"&ndash;&gt;-->
+<!--&lt;!&ndash;        >&ndash;&gt;-->
+
+<!--&lt;!&ndash;                <ng-container *ngFor="let person of persons">&ndash;&gt;-->
+
+<!--&lt;!&ndash;                        <swiper-slide>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="persons-box" >&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <div class="person-photo" *ngIf="person.photo">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <img [src]="person.photo" alt="Photo of {{ person.name }}" class="persons-box-img">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="box-text">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <h2 class="persons-title">{{ person.name }}</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <span class="persons-type">{{ person.birth_year }}</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </swiper-slide>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                </ng-container>&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;            <div class="swiper-button-prev"></div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            <div class="swiper-button-next"></div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        </swiper-container>&ndash;&gt;-->
+
+
+<!--</section>-->

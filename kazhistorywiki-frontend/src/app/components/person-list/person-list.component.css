@@ -61,10 +61,12 @@
 /*  }*/
 /**/
 
+/* styles.css */
 
-*{
-  font-family: "Sedan", serif;
-  font-style: italic;
+
+
+* {
+  font-family: serif;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
@@ -72,27 +74,28 @@
   scroll-padding-top: 2rem;
 }
 
-:root{
+:root {
   --main-color: #ffb43a;
-  --hover-color: hsl(37,94%,57%);
+  --hover-color: hsl(37, 94%, 57%);
   --body-color: #1e1e2a;
-  --container-color: #2d2e37;
-  --text-color: #fcfeff
+  --container-color-2: #000000;
+  --text-color: #fcfeff;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
-img{
+img {
   width: 100%;
 }
 
-.container{
+.container {
   max-width: 1068px;
   margin: auto;
 }
-header{
+
+header {
   position: fixed;
   top: 0;
   left: 0;
@@ -101,15 +104,14 @@ header{
   z-index: 100;
 }
 
-.click_btn{
+.click_btn {
   display: flex;
   align-items: center;
   column-gap: 0.8rem;
   color: var(--text-color);
-
 }
 
-.click_btn .bx{
+.click_btn .bx {
   font-size: 21px;
   background: var(--main-color);
   width: 40px;
@@ -118,49 +120,48 @@ header{
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
-.click_btn .bx:hover{
+.click_btn .bx:hover {
   background: var(--hover-color);
-
 }
 
-.click_btn span{
+.click_btn span {
   font-size: 1rem;
   font-weight: 400;
 }
 
-.heading{
+.headingg {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: var(--container-color);
+  background: rgb(90, 96, 100) !important;
   padding: 8px 14px;
-  border: 1px solid hsl(200 100% 99% / 5);
+  border: 1px solid rgb(0,89,148) !important;
   margin-bottom: 2rem;
 }
 
-.heading-title{
+.headingg-title {
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 
-.persons-box{
+.persons-box {
   position: relative;
-  width: 100%;
+  width: 70%;
   height: 380px;
   overflow: hidden;
+  margin: 2rem;
+  margin-bottom: 10rem;
 }
 
-.persons-box img{
+.persons-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-
 }
 
-.persons-box text{
+.persons-box .box-text {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -170,35 +171,55 @@ header{
   flex-direction: column;
   justify-content: flex-end;
   padding: 14px;
-  background: linear-gradient(8deg,hsl(240 17% 14% / 74%) 14%,
-                             hsl(240 17% 14% / 14%) 14%);
+  background: linear-gradient(8deg, hsl(240 17% 14% / 74%) 14%, hsl(240 17% 14% / 14%) 14%);
   overflow: hidden;
-
-
 }
 
-.persons-title{
+.persons-title {
   font-size: 1.1rem;
   font-weight: 500;
+  color: #fcfeff;
 }
 
-.persons-type{
+.persons-type {
   font-size: 0.938rem;
+  color: #fcfeff;
 }
 
-.persons .heading{
-  padding: 10px 14px;
-
+.swiper-container {
+  display: inline-flex; /* Используем inline-flex для выравнивания слайдов в строку */
+  overflow-x: auto; /* Включаем горизонтальную прокрутку */
+  gap: 1.5rem; /* Отступ между слайдами */
+  width: 100%; /* Ширина контейнера равна ширине экрана */
 }
 
-.swiper-container{
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(247px,1fr));
-  gap: 1.5rem;
+.swiper-wrapper {
+  display: flex;
+  align-items: center; /* Выравнивание по центру */
 }
 
-.swiper-container .persons-box:hover .persons-box-img{
+.swiper-slide {
+  flex: 0 0 auto; /* Предотвращаем увеличение слайдов */
+  width: 247px; /* Устанавливаем фиксированную ширину для каждого слайда */
+}
+
+.swiper-container .persons-box:hover .persons-box-img {
   transform: scale(1.1);
   transition: 0.5s;
+}
 
+.swiper-btn{
+  display: flex;
+}
+
+.swiper-button-next,
+.swiper-button-prev{
+  position: static !important;
+  margin: 0 0 0 10px !important;
+}
+
+.swiper-btn-next:after,.swiper-btn-prev::after{
+  color: var(--text-color);
+  font-size: 18px !important;
+  font-weight: 700;
 }

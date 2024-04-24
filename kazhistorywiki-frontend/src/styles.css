@@ -151,7 +151,7 @@
   --tt-dark: rgba(255,255,255,0.66);
   --bdc: #eaeaea;
   --bdc-darker: #b1b1b1;
-  --bdc-dark: rgba(255,255,255,0.15);
+  --bdc-dark: rgb(0, 35, 121);
   --bsh: 0 10px 26px rgba(0,0,0,0.15);
   --bsh-2: 0 2px 8px rgba(0,0,0,0.05);
   --bsh-poster: 0 0 0 1px #ddd, 0 2px 8px rgba(0,0,0,0.05);
