@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: 'historical-periods', component: HistoricalPeriodListComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  // { path: '', component: HomeComponent },
+  { path: '', component: HomeComponent },
   { path: 'events', component: EventListComponent },
 ];
 
